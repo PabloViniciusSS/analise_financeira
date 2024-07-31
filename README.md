@@ -41,23 +41,28 @@ Dados de Ações Financeiras(Api YFinance):
 
 **Amazon**:
 
-![][image1]
+![Amazon](https://github.com/user-attachments/assets/e4a20b8f-9eea-4b74-b2af-c76b63e91718)
+
 
 **AMD**:
 
-![][image2]
+![amd](https://github.com/user-attachments/assets/9f6bc064-e91f-4d49-91fe-8aa115303891)
+
 
 **Apple**:
 
-![][image3]
+![apple](https://github.com/user-attachments/assets/bde47363-8578-4650-adf9-4623e9c1aa21)
+
 
 **GameStop**:
 
-![][image4]
+
+![GameStop](https://github.com/user-attachments/assets/35b232e3-7663-456f-9636-4846b8b1255e)
 
 **Tesla**:
 
-![][image5]
+![Tesla](https://github.com/user-attachments/assets/664864d5-7256-4e6c-a8b9-0cc5e8261cfd)
+
 
 Dados de Receitas(Extraído da Web):
 
@@ -68,11 +73,13 @@ Além dos dados financeiros, extrai também informações das receitas das empre
 
 **GameStop:**
 
-**![][image6]**
+
+![GameStop](https://github.com/user-attachments/assets/e71a308e-ebc4-44fe-9dd3-d0acf72c9ef6)
 
 **Tesla:**
 
-**![][image7]**
+![Tesla](https://github.com/user-attachments/assets/93593725-4a4d-486d-bce3-bb29841bd830)
+
 
 #### **3\. Preparação dos Dados (Data Preparation) 🛠️**
 

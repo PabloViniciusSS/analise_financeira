@@ -228,77 +228,91 @@ Matplotlib: Usado para criar visualizações estatísticas interativas, para apr
 
 Foi desenvolvido 3 gráficos para cada empresa(Amazon, AMD, Apple, GameStop, Tesla), analisando os dados financeiros até o presente momento. 
 
-* O gráfico de fechamento   
+* **O gráfico de fechamento**  
   * Mostra o fechamento das ações ao longo do tempo;  
   * Útil para identificar tendência de alta
 
 **Apple**
 
-**![][image8]**
-
-**AMD**
-
-**![][image9]**
+![fechamentos](https://github.com/user-attachments/assets/99d53f7e-b1e2-4540-9d7e-32adfeb2d4e6)
 
 **Amazon**
 
-**![][image10]**
+![fechamento](https://github.com/user-attachments/assets/1adf259e-19ae-491a-b761-f80cedc66de3)
+
+**AMD**
+
+![fechamento](https://github.com/user-attachments/assets/9e032a34-ae7f-4b0d-a590-ba256979cf36)
 
 **Gamestop**
 
-**![][image11]**
+![fechamento](https://github.com/user-attachments/assets/54221f8e-9f45-452b-8dd5-16135baf65c7)
 
 **Tesla**
 
-![][image12]
+![fechamento](https://github.com/user-attachments/assets/17387669-3cad-42eb-bba0-444cf5fe396e)
 
-* Gráfico de Candlestick   
+* **Gráfico de Candlestick**   
   * Ideal para identificar padrões de reversão ou continuação de tendência;  
   * Utiliza dados de .preço de abertura, fechamento, máxima e mínima das ações;  
   * Cada “candle” (candelabro) representa um período (por exemplo, um dia) e mostra visualmente as variações.
 
 Apple
 
-![][image13]  
+![Gráfico de Candlestick](https://github.com/user-attachments/assets/7771ae38-dc82-4958-9950-4800f91bca4b)
+
+ 
 Amazon  
-![][image14]  
+
+![Gráfico de Candlestick](https://github.com/user-attachments/assets/de489cc5-fa83-4210-9d50-82936184fdf9)
+
+
 AMD  
-![][image15]
+
+![Gráfico de Candlestick](https://github.com/user-attachments/assets/25c1f0da-ffbe-4868-9dac-4700c624874e)
+
 
 GameStop  
-![][image16]  
-Tesla  
-![][image17]
 
-* Gráfico de Área dos Preços de Ações(Area Chart):  
+![Gráfico de Candlestick](https://github.com/user-attachments/assets/a77ec2d7-816c-4a25-a389-8b5c69e5172d)
+
+  
+Tesla  
+
+![Gráfico de Candlestick](https://github.com/user-attachments/assets/47481614-3d1f-417f-87dc-defb577d20ec)
+
+
+* **Gráfico de Área dos Preços de Ações(Area Chart):**  
   * Destaca a variação dos preços das ações com base nos valores de abertura, fechamento, preço mais alto e preço mais baixo;  
   * É uma maneira eficaz de visualizar como esses valores se relacionam ao longo do tempo.
 
 Apple  
-![][image18]
+
+![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/72b270b3-060d-43fc-a436-3cd5b301a0a9)
 
 Amazon
 
-![][image19]  
+![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/441460e4-4f53-421c-a701-5374ed900ac1)
+
 AMD
 
-![][image20]
+![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/76bb801c-f25e-481a-b0fc-f4ec34f2ab93)
 
 GameStop
 
-![][image21]
+![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/8ef5dc7e-f860-4451-b1c5-468298e010ad)
 
 Tesla
 
-![][image22]
+![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/f7cd0deb-3678-40b0-b635-c670937f856c)
 
 Foi criado dois paineis para comparar as receitas com o valor de ações das empresas Tesla e GameStop
 
 Tesla
 
-![][image23]
+![tesla](https://github.com/user-attachments/assets/ebc204b3-5489-4ee8-b3a6-d46fe41925b6)
 
 GameStop
 
-![][image24]
+![gamestop](https://github.com/user-attachments/assets/8029f453-7fc0-4425-95a0-382b4debbf96)
 

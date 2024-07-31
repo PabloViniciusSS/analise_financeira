@@ -18,7 +18,7 @@ Foi realizado as seguintes ações:
   * Tesla;  
   * GameStop
 
-* **Painel de controle de ações e receita da empresas:**  
+* **Painel de controle de ações e receita das empresas:**  
   * Tesla;  
   * GameStop
 
@@ -85,7 +85,7 @@ Além dos dados financeiros, extrai também informações das receitas das empre
 
 Para a extração dos dados para analisar os dados financeiros, a linguagem Python.
 
- Para extrair os dados de ações financeiras utiliza a  api Yfinance e para extrair os dados na Web vamos utilizar o web scraping através do BeautifulSoup.
+Para extrair os dados de ações financeiras utiliza a api Yfinance e para extrair os dados na Web vamos utilizar a web scraping através do BeautifulSoup.
 
 Código Utilizados:
 
@@ -108,7 +108,7 @@ Para pegar os históricos dos valores de cada empresa é utilizado o ***History*
 
 **Extração de Dados da Web**
 
-Através do endereço eletronico utilizo o “request” para solicitar as informações do HTTP.
+Através do endereço eletrônico  utilizo o “request” para solicitar as informações do HTTP.
 
 		html_data = request.get(url).text 
 
@@ -116,7 +116,7 @@ O “*BeautifulSoup*” lê as informações do conteudo pego anteriormente, cri
 
 		soup = BeatigulSoup(html_data, ‘html.parser’)
 
-Utiliza o “*find\_all(‘table”)* para buscar todas as tabelas e guarda em tables.
+Utiliza o “*find_all(‘table”)* para buscar todas as tabelas e guarda em tables.
 
 		tables = soup.find_all(‘table’)
 
@@ -126,7 +126,7 @@ Para ser feito a análise, é necessário a criação de um DataFrame com as inf
 
 O Data Frame tem as colunas Data(Date), Receita(Revenue).
 
-Após isso é percorrido as tabelas que foram guardadas no *tables* e busca a tabela com o nome *"GameStop Quarterly Revenue"*.
+Após isso é percorrido as tabelas guardadas no *tables* e busca a tabela com o nome *"GameStop Quarterly Revenue"*.
 
 		for table in tables:
 
@@ -146,7 +146,7 @@ Então é realizado o mapeamento do código html, e é buscado as colunas da tab
 
 					revenue = columns[1].get_text()
 
-E antes de guardar essas informações foi pedido para ser feito uma primeira limpeza, na qual, os cifrões e as vírgulas eram para ser retirados no dados de *revenue*, antes de adicionarmos ao DataFrame foi feito a limpeza utilizando o replace:
+E antes de guardar essas informações foi pedido para ser feito uma primeira limpeza, na qual, os cifrões e as vírgulas eram para retirar no dados de *revenue*, antes de adicionarmos ao DataFrame foi feito a limpeza utilizando o replace:
 
 		 **revenue = revenue.replace(‘$’, ‘’).replace(“,” ,” ”)**
 
@@ -208,17 +208,17 @@ Foi realizado também o reset do index das tabelas de ações, que vinha com a d
 
 ### **4\. Tecnologias, Linguagens de Programação e Bibliotecas 🔧**
 
-Web Scraping: A técnica é utilizada para extração de informações de uma páginas Web, permitindo a coleta de dados para gerar insights poderosos.Neste projeto utilizou para a extração de informações em duas páginas Web distintas em HTML, conseguindo extrair as tabelas desejadas para análise.
+Web Scraping: A técnica é utilizada para extração de informações de uma páginas webs, permitindo a coleta de dados para gerar insights poderosos. Neste projeto utilizou para a extração de informações em duas páginas webs distintas em HTML, conseguindo extrair as tabelas desejadas para análise.
 
-Python: É utilizado por causa da sua simplicidade e robustez, além da sua vasta gama de bibliotecas para análise de dados, permitindo ações de coleta, visualização e manipulação de dados, tornando o processo mais eficiente, acessível..
+Python: É utilizado devido à sua simplicidade e robustez, além da sua vasta gama de bibliotecas para análise de dados, permitindo ações de coleta, visualização e manipulação de dados, tornando o processo mais eficiente, acessível.
 
 Plotly: É uma biblioteca Python feita para criação de gráficos, e foi utilizada para plotar os gráficos do projeto, facilitando a interpretação dos dados. Fazendo com que ao explorar os dados se torne intuitivo.
 
 Pandas: É amplamente utilizado nas análises de dados, pois, tem uma gama de funcionalidades poderosíssimas para trabalhar com dados tabulares, como em planilhas e Banco de Dados. Facilitando o trabalho de manipulação, carregamento e análise de grandes volumes de dados, permitindo a extração de insights valiosíssimos.
 
-Yfinance: Api para acessar as informações financeiras atualizadas de diversas empresas.
+Yfinance: API para acessar as informações financeiras atualizadas de diversas empresas.
 
-Beautiful Soup: Biblioteca que facilita a extração de informações de páginas Web, com sua capacidade de analisar HTML e XML, permitindo navegar pelo código de forma eficiente e identificando e extraindo informações de forma precisa, otimizando o processo de coleta de dados.
+Beautiful Soup: Biblioteca que facilita a extração de informações de páginas webs, com sua capacidade de analisar HTML e XML, permitindo navegar pelo código de forma eficiente e identificando e extraindo informações de forma precisa, otimizando o processo de coleta de dados.
 
 Request: Biblioteca Python para fazer requisições HTTP. Essa funcionalidade é vital para integrar diversas fontes de dados e garantir que as informações estejam atualizadas.
 
@@ -226,7 +226,7 @@ Matplotlib: Usado para criar visualizações estatísticas interativas, para apr
 
 **5\. Resultados Finais e Insights 💡**
 
-Foi desenvolvido 3 gráficos para cada empresa(Amazon, AMD, Apple, GameStop, Tesla), analisando os dados financeiros até o presente momento. 
+Foi desenvolvido 3 gráficos para cada empresa(Amazon, AMD, Apple, GameStop, Tesla), analisando os dados financeiros até o momento. 
 
 * **O gráfico de fechamento**  
   * Mostra o fechamento das ações ao longo do tempo;  
@@ -254,7 +254,7 @@ Foi desenvolvido 3 gráficos para cada empresa(Amazon, AMD, Apple, GameStop, Tes
 
 * **Gráfico de Candlestick**   
   * Ideal para identificar padrões de reversão ou continuação de tendência;  
-  * Utiliza dados de .preço de abertura, fechamento, máxima e mínima das ações;  
+  * Utiliza dados de preço de abertura, fechamento, máxima e mínima das ações;  
   * Cada “candle” (candelabro) representa um período (por exemplo, um dia) e mostra visualmente as variações.
 
 Apple
@@ -306,7 +306,9 @@ Tesla
 
 ![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/f7cd0deb-3678-40b0-b635-c670937f856c)
 
-Foi criado dois paineis para comparar as receitas com o valor de ações das empresas Tesla e GameStop
+**Painéis**
+
+Foi criado dois painéis para comparar as receitas com o valor de ações das empresas Tesla e GameStop
 
 Tesla
 

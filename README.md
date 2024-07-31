@@ -91,7 +91,7 @@ Código Utilizados:
 
 Para acessar as informações das ações das empresas utiliza o ***Ticker*** e depois o código da empresa.
 
-		***x \= yf.Ticker("codigo\_empresa")***
+		x = yf.Ticker("codigo_empresa")
 
 Os códigos de cada empresa são:
 
@@ -104,25 +104,25 @@ Os códigos de cada empresa são:
 
 Para pegar os históricos dos valores de cada empresa é utilizado o ***History*** e o “*period”* para pegar o período desejado, no caso, foi retirado pelo período máximo, desde o início.
 
-		**y \= x.history( period=”max” )**
+		y = x.history( period=”max” )
 
 **Extração de Dados da Web**
 
 Através do endereço eletronico utilizo o “request” para solicitar as informações do HTTP.
 
-		***html\_data \= request.get(url).text*** 
+		html_data = request.get(url).text 
 
 O “*BeautifulSoup*” lê as informações do conteudo pego anteriormente, criando um objeto.
 
-		***soup \= BeatigulSoup(html\_data, ‘html.parser’)***
+		soup = BeatigulSoup(html_data, ‘html.parser’)
 
 Utiliza o “*find\_all(‘table”)* para buscar todas as tabelas e guarda em tables.
 
-		***tables \= soup.find\_all(‘table’)***
+		tables = soup.find_all(‘table’)
 
 Para ser feito a análise, é necessário a criação de um DataFrame com as informações desejadas, com isso, utiliza o pandas para criar um DataFrame vazio:
 
-		***nome\_revenue \= pd.DataFrame(columns=\[“Date”, “Revenue”\])***
+		nome_revenue = pd.DataFrame(columns=[“Date”, “Revenue”])
 
 O Data Frame tem as colunas Data(Date), Receita(Revenue).
 
@@ -130,79 +130,79 @@ Após isso é percorrido as tabelas que foram guardadas no *tables* e busca a ta
 
 		**for table in tables:**
 
-			**if “*GameStop Quarterly Revenue"* in table.get\_text():**
+			**if “GameStop Quarterly Revenue" in table.get_text():**
 
 Então é realizado o mapeamento do código html, e é buscado as colunas da tabela desejada e guardadas nas variáveis date e revenue.
 
-			**tbody \= table.find(‘tbody’)**
+			**tbody = table.find(‘tbody’)**
 
-			**for row in tbody.find\_all(‘tr’):**
+			**for row in tbody.find_all(‘tr’):**
 
-			**columns \= row.find\_all('td')**
+			**columns = row.find_all('td')**
 
 				**if columns:**
 
-					**date \= columns\[0\].get\_text()**
+					**date = columns[0].get_text()**
 
-					**revenue \= columns\[1\].get\_text()**
+					**revenue = columns[1].get_text()**
 
 E antes de guardar essas informações foi pedido para ser feito uma primeira limpeza, na qual, os cifrões e as vírgulas eram para ser retirados no dados de *revenue*, antes de adicionarmos ao DataFrame foi feito a limpeza utilizando o replace:
 
-		 **revenue \= revenue.replace(‘$’, ‘’).replace(“,” ,” ”)**
+		 **revenue = revenue.replace(‘$’, ‘’).replace(“,” ,” ”)**
 
 Com os dados limpos é adicionado ao Data Frame:
 
-			**new\_row \= pd.DataFrame({“Date”}: \[date\], “Revenue”: \[revenue\]})**
+			**new_row = pd.DataFrame({“Date”}: [date], “Revenue”: [revenue]})**
 
-			***nome\_revenue* \= pd.concat(\[gme\_revenue, new\_row\], ignore\_index=True)**
+			***nome_revenue* = pd.concat([gme_revenue, new_row], ignore_index=True)**
 
 O código completo ficou assim:
 
-		***html\_data \= request.get(url).text*** 
+		html_data = request.get(url).text
 
-***soup \= BeatigulSoup(html\_data, ‘html.parser’)***
+		soup = BeatigulSoup(html_data, ‘html.parser’)
 
-***tables \= soup.find\_all(‘table’)***
+		tables = soup.find_all(‘table’)
 
-***nome\_revenue \= pd.DataFrame(columns=\[“Date”, “Revenue”\])***
+		nome_revenue = pd.DataFrame(columns=[“Date”, “Revenue”])
 
-**for table in tables:**
+		for table in tables:
 
-**if “*GameStop Quarterly Revenue"* in table.get\_text():**
+			if “GameStop Quarterly Revenue" in table.get_text():
 
-**tbody \= table.find(‘tbody’)**
+				tbody = table.find(‘tbody’)
 
-				**for row in tbody.find\_all(‘tr’):**
+				for row in tbody.find_all(‘tr’):
 
-					**columns \= row.find\_all('td')**
+					columns = row.find_all('td')
 
-**if columns:**
+					if columns:
 
-						**date \= columns\[0\].get\_text()**
+						date = columns[0].get_text()
 
-						**revenue \= columns\[1\].get\_text()**
+						revenue = columns[1].get_text()
 
- 						**revenue \= revenue.replace(‘$’, ‘’).replace(“,” ,” ”)**
+ 						revenue = revenue.replace(‘$’, ‘’).replace(“,” ,” ”)
 
-**new\_row \= pd.DataFrame({“Date”}: \[date\], “Revenue”: \[revenue\]})**
+						new_row = pd.DataFrame({“Date”}: [date], “Revenue”: [revenue]})
 
-						***nome\_revenue* \= pd.concat(\[gme\_revenue, new\_row\], ignore\_index=True)**
+						nome\_revenue* \= pd.concat(\[gme\_revenue, new\_row\], ignore\_index=True)**
 
-Limpeza:
+**Limpeza:**
 
 Além da limpeza mostrada no item acima para a retirada do cifrão e vírgulas:
 
-		**revenue \= revenue.replace(‘$’, ‘’).replace(“,” ,” ”)**
+		revenue = revenue.replace(‘$’, ‘’).replace(“,” ,” ”)
 
 foi retirado também os valores nulos e vazios.
 
-		**nome\_revenue.dropna(inplace=True)**
+		nome_revenue.dropna(inplace=True)
 
-		**nome\_revenue \= nome\_revenue\[nome\_revenue\[‘Revenue’\] \!= “”\]**
+		nome_revenue = nome_revenue[nome_revenue[‘Revenue’] != “”]
 
 Foi realizado também o reset do index das tabelas de ações, que vinha com a data como index, o que atrapalha na hora de fazer alguma manipulação, usando o **reset\_index(inplace=True)**
 
-		**variavel.reset\_index(inplace=True)**
+		variavel.reset_index(inplace=True)
 
 		
 

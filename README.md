@@ -128,23 +128,23 @@ O Data Frame tem as colunas Data(Date), Receita(Revenue).
 
 Após isso é percorrido as tabelas que foram guardadas no *tables* e busca a tabela com o nome *"GameStop Quarterly Revenue"*.
 
-		**for table in tables:**
+		for table in tables:
 
-			**if “GameStop Quarterly Revenue" in table.get_text():**
+			if “GameStop Quarterly Revenue" in table.get_text():
 
 Então é realizado o mapeamento do código html, e é buscado as colunas da tabela desejada e guardadas nas variáveis date e revenue.
 
-			**tbody = table.find(‘tbody’)**
+			tbody = table.find(‘tbody’)
 
-			**for row in tbody.find_all(‘tr’):**
+			for row in tbody.find_all(‘tr’):
 
-			**columns = row.find_all('td')**
+			columns = row.find_all('td')**
 
-				**if columns:**
+				if columns:
 
-					**date = columns[0].get_text()**
+					date = columns[0].get_text()
 
-					**revenue = columns[1].get_text()**
+					revenue = columns[1].get_text()
 
 E antes de guardar essas informações foi pedido para ser feito uma primeira limpeza, na qual, os cifrões e as vírgulas eram para ser retirados no dados de *revenue*, antes de adicionarmos ao DataFrame foi feito a limpeza utilizando o replace:
 

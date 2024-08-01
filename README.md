@@ -4,7 +4,8 @@
 
 **Objetivo:**
 
-Nesse projeto assumirei um trabalho em uma empresa de investimentos em startups que ajuda os clientes a investir seu dinheiro em ações. A ideia é extrair dados financeiros como histórico de preços e ações e relatórios de receita trimestrais de várias fontes. Depois realizar a criação de um painel para identificar padrões ou tendências. As ações trabalhadas serão da Apple, Tesla, Amazon, AMD e GameStop.  
+Neste projeto assumirei um pepl fundamental em uma empresa de investimentos em startups que é especialista em auxiliar os clientes a investir em ações promissoras. O objetivo  é extrair dados financeiros como histórico de preços e ações e relatórios de receita trimestrais de várias fontes. Realizar a criação de um painel para identificar padrões ou tendências. Para que, possam tirar insights valioros ajudando nas tomadas de decisões estrategicas dos investidores.
+
 Foi realizado as seguintes ações:
 
 * **Extração de dados de ações das empresas**:  
@@ -21,6 +22,10 @@ Foi realizado as seguintes ações:
 * **Painel de controle de ações e receita das empresas:**  
   * Tesla;  
   * GameStop
+ 
+Investir em ações requer análise cuidadosa. Com esses dados, esperamos que os investidores possam tomar decisões mais informadas.
+
+Investir em ações exige uma análise cuidadosa e embasada. Com a disponibilização desses dados em um formato acessível e visualmente atraente, esperamos capacitar os investidores a tomarem decisões mais informadas e estratégicas. O painel não apenas simplifica a visualização de informações complexas, mas também proporciona insights valiosos que podem maximizar o retorno sobre o investimento.
 
 #### **2\. Compreensão dos Dados (Data Understanding) 🧐**
 
@@ -229,8 +234,18 @@ Matplotlib: Usado para criar visualizações estatísticas interativas, para apr
 Foi desenvolvido 3 gráficos para cada empresa(Amazon, AMD, Apple, GameStop, Tesla), analisando os dados financeiros até o momento. 
 
 * **O gráfico de fechamento**  
-  * Mostra o fechamento das ações ao longo do tempo;  
-  * Útil para identificar tendência de alta
+
+O gráfico de fechamento é uma representação visual dos preços de fechamento das ações ao longo do tempo. Aqui estão algumas observações importantes:
+
+* Tendência de Alta e Baixa:
+	*	O gráfico de fechamento nos ajuda a identificar tendências de alta ou baixa.
+	*	Quando os preços de fechamento aumentam consistentemente, isso sugere otimismo no mercado.
+	*	Por outro lado, quedas frequentes indicam pessimismo.
+   
+* Volatilidade:
+  
+	*	A volatilidade é visível nas flutuações dos preços de fechamento.
+	*	Períodos de alta volatilidade podem ser oportunidades para traders ou sinais de incerteza no mercado.
 
 **Apple**
 
@@ -273,9 +288,14 @@ Foi desenvolvido 3 gráficos para cada empresa(Amazon, AMD, Apple, GameStop, Tes
 * Tendência de alta acentuada a partir de 2018, com pico de 2020 onde os valores maximos de 400, esse aumento provavelmente por causa de algum evento economico.
 
 * **Gráfico de Candlestick**   
-  * Ideal para identificar padrões de reversão ou continuação de tendência;  
-  * Utiliza dados de preço de abertura, fechamento, máxima e mínima das ações;  
-  * Cada “candle” (candelabro) representa um período (por exemplo, um dia) e mostra visualmente as variações.
+O gráfico de candlestick é uma ferramenta poderosa para analisar movimentos de preços. Aqui estão os principais pontos:
+
+* Padrões de Reversão e Continuação:
+	*	Os candlesticks representam intervalos de tempo (por exemplo, um dia) e mostram os preços de abertura, fechamento, máxima e mínima.
+	*	Padrões específicos de candlestick podem indicar reversões de tendência ou continuação do movimento atual.
+
+* Contextualização das Empresas:
+ 	* 	Analisar candlesticks para empresas como Apple, Amazon, AMD, GameStop e Tesla nos permite entender melhor seus movimentos de preços.
 
 Apple
 
@@ -316,9 +336,18 @@ Tesla
 ![Gráfico de Candlestick](https://github.com/user-attachments/assets/47481614-3d1f-417f-87dc-defb577d20ec)
 
 
-* **Gráfico de Área dos Preços de Ações(Area Chart):**  
-  * Destaca a variação dos preços das ações com base nos valores de abertura, fechamento, preço mais alto e preço mais baixo;  
-  * É uma maneira eficaz de visualizar como esses valores se relacionam ao longo do tempo.
+* **Gráfico de Área dos Preços de Ações(Area Chart):**
+  
+Os gráficos de área dos preços de ações são ferramentas essenciais para analisar a evolução dos valores das ações ao longo do tempo. Vamos explorar os principais pontos:
+
+* Variação dos Preços:
+	*	O gráfico de área destaca como os preços de abertura, fechamento, preço mais alto e preço mais baixo variam em um determinado período.
+	*	É uma maneira eficaz de visualizar essas variações e entender como elas se relacionam.
+* Identificação de Tendências:
+	*	Observando a área sob a curva, podemos identificar tendências de alta ou baixa.
+	*	Se a área estiver crescendo, isso sugere otimismo no mercado; se estiver diminuindo, pode indicar pessimismo.
+* Contextualização das Empresas:
+	*	Ao aplicar esses gráficos a empresas como Apple, Amazon, AMD, GameStop e Tesla, podemos entender melhor seus movimentos de preços.
 
 Apple  
 
@@ -368,7 +397,13 @@ Tesla
 
 ![tesla](https://github.com/user-attachments/assets/ebc204b3-5489-4ee8-b3a6-d46fe41925b6)
 
+
+Conclui-se que o painel oferece uma visão clara e detalhada do desempenho financeiro da Tesla em uma década inteira. A análise dos gráficos de preço das ações e receita confirma que há uma correlação positiva entre a receita e o aumento do valor das ações. Dessa forma, pode-se dizer que o painel pode fornecer insights valiosos para os investidores que desejam entender a situação do mercado e fazer previsões informadas.
+
 GameStop
 
 ![gamestop](https://github.com/user-attachments/assets/8029f453-7fc0-4425-95a0-382b4debbf96)
 
+Este painel apresenta uma visão detalhada e clara do desempenho financeiro da GameStop ao longo do tempo. A observação dos gráficos de preços das ações e receitas mostra uma correlação nítida entre alterações no status do mercado e variações financeiras. Essa visão pode ser altamente benéfica para qualquer investidor disposto a aprender sobre a história das flutuações do mercado e, assim, tomar uma decisão baseada em fatos.
+
+**## Conclusão**

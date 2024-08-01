@@ -148,13 +148,13 @@ Então é realizado o mapeamento do código html, e é buscado as colunas da tab
 
 E antes de guardar essas informações foi pedido para ser feito uma primeira limpeza, na qual, os cifrões e as vírgulas eram para retirar no dados de *revenue*, antes de adicionarmos ao DataFrame foi feito a limpeza utilizando o replace:
 
-		 **revenue = revenue.replace(‘$’, ‘’).replace(“,” ,” ”)**
+		 revenue = revenue.replace(‘$’, ‘’).replace(“,” ,” ”)
 
 Com os dados limpos é adicionado ao Data Frame:
 
-			**new_row = pd.DataFrame({“Date”}: [date], “Revenue”: [revenue]})**
+			new_row = pd.DataFrame({“Date”}: [date], “Revenue”: [revenue]})
 
-			***nome_revenue* = pd.concat([gme_revenue, new_row], ignore_index=True)**
+			nome_revenue* = pd.concat([gme_revenue, new_row], ignore_index=True)
 
 O código completo ficou assim:
 
@@ -236,21 +236,41 @@ Foi desenvolvido 3 gráficos para cada empresa(Amazon, AMD, Apple, GameStop, Tes
 
 ![fechamentos](https://github.com/user-attachments/assets/99d53f7e-b1e2-4540-9d7e-32adfeb2d4e6)
 
+*  A partir de 2010 até 2020 tem um aumento gradual dos preços, com aceleração a paritir de 2016;
+*  Pós 2020 ha um aumento sugerindo que o mercado esta altamente otimista ou especulativo, com investidores dispostos a pagar preçoes crescentes no mercado.
+
 **Amazon**
 
 ![fechamento](https://github.com/user-attachments/assets/1adf259e-19ae-491a-b761-f80cedc66de3)
+
+* Antes de 2010 os preços das ações estavam relativamente estáveis, com pequenas flutuações;
+* A partir de 2010 há um aumento significativo e continuo nos preços de ações. Esteperiodo marca o início de um crescimento exponencial.
+* Após 2020, a volatilidade aumenta consideravelmente. Há grandes oscilações nos preços, refletindo eventos de mercado significativos (como a pandemia de COVID-19 e subsequentes impactos econômicos).
+
 
 **AMD**
 
 ![fechamento](https://github.com/user-attachments/assets/9e032a34-ae7f-4b0d-a590-ba256979cf36)
 
+* Há uma leve queda em torno 2022, e ate 2016 há um aumento gradual nos preços de abertura, com algumas flutuações;
+* A partr de 2016 os peços começam a subir mais acentuadamente culminando em um pico significativo logo após 2020, onde os preços do valor maximo de 200.
+
+
 **Gamestop**
 
 ![fechamento](https://github.com/user-attachments/assets/54221f8e-9f45-452b-8dd5-16135baf65c7)
 
+* Teve um momento de estabilidade entre 2004 e 2016, os preços ficando aproximademente entre 0 e 20.
+* E entre 2016 e 2018 teve um aumento gradual nos preços de abertura, com algumas flutuações. Isso indica uma recuperação economica ou aumento da demanda de ativos
+* Aumento acentuado em 2020 e depois uma queda bruscas, mostranod uma alta volatilidade e possivelmente uma especulação intensa no mercado.
+
 **Tesla**
 
 ![fechamento](https://github.com/user-attachments/assets/17387669-3cad-42eb-bba0-444cf5fe396e)
+
+* Periodo de estabilidade entre 2010 e 2016 com preços baixos;
+* Aumento gradual entre 2016 e 2018 há um aumento gradual nos preços com algumas flutuações;
+* Tendência de alta acentuada a partir de 2018, com pico de 2020 onde os valores maximos de 400, esse aumento provavelmente por causa de algum evento economico.
 
 * **Gráfico de Candlestick**   
   * Ideal para identificar padrões de reversão ou continuação de tendência;  
@@ -261,23 +281,37 @@ Apple
 
 ![Gráfico de Candlestick](https://github.com/user-attachments/assets/7771ae38-dc82-4958-9950-4800f91bca4b)
 
+* De 2000 até 2010 tem um leve aumento na volatilidade e nos preços, com algumas oscilações notaveis em torno de 2008, possivelmente por cauxa da crise financeira;
+* De 2010 em diante tem um aumento consideravel nos preços e na volatilidades. Após 2020, há uma aceleração marcante no preço das ações, com grandes flutuações diárias, indicando alta volatilidade e possivelmente especulação ou um mercado muito reativo a notícias e eventos.
  
 Amazon  
 
 ![Gráfico de Candlestick](https://github.com/user-attachments/assets/de489cc5-fa83-4210-9d50-82936184fdf9)
 
+* Antes de 2010 há pequenas oscilações diárias, indicando baixa volatilidade;
+* Entre 2010 e 2020 A um aumento das candle relflete a aceleração do crescimento e aumento da volatilidade;
+* Entre 2020 e 2023 existe padrões que sinalizam momentos de indecisão no mercado ou reversão de tendência
 
 AMD  
 
 ![Gráfico de Candlestick](https://github.com/user-attachments/assets/25c1f0da-ffbe-4868-9dac-4700c624874e)
 
+* Entre 1995 - 2013 há um periodo de estabilidade, os preços permaneceram relativamente estáveis e baixos, com pequenas flutuações.
+* A partir de 2013 em diante há um aumento da volatilidade dos preços. Os picos e vales tornam-se mais pronunciados, sugerindo incertezas no mercado.
 
 GameStop  
 
 ![Gráfico de Candlestick](https://github.com/user-attachments/assets/a77ec2d7-816c-4a25-a389-8b5c69e5172d)
 
+* Periodo de estabilidade entre 2004 e 2016 com valores aproximados de 0 a 20;
+* Aumento gradual entre 2016 ha 2018;
+* A partir de 2018 houve uma alta acentuada, culminando em picos significativos logo apos 2020 onde os preços aproximaram do valor maximo de 80.
   
 Tesla  
+
+* Estabilidade inicial entre 2012 ate 2017 com valores estaveis e baixos;
+* Aumento gradual entre 2017 e 2018 com algumas fluações.
+*  Tendencia acentudada a paritir de 2018, chegando no pico em 2020.
 
 ![Gráfico de Candlestick](https://github.com/user-attachments/assets/47481614-3d1f-417f-87dc-defb577d20ec)
 
@@ -290,21 +324,41 @@ Apple
 
 ![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/72b270b3-060d-43fc-a436-3cd5b301a0a9)
 
+* A paritr de 2000 até 2010 há um alargamento da área, indicando um aumento na volatilidade e nos preços;
+* De 2010 em diante: A área preenchida se expande significamente, especialmente após 2020, com os preços máxmos e minimos se distanciando mais.
+
 Amazon
 
 ![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/441460e4-4f53-421c-a701-5374ed900ac1)
+
+* Tendência geral de alta é clara, com uma inclinação acentuada após 2010;
+* Existem correções notáveis, especialmente após picos significativos. Estas correções são importantes para avaliar a saúde do movimento de alta;
+* Em 2023 há um pico, e depois uma correção acentuada, sugerindo uma possível resistência forte nesse nível de preço.
+
 
 AMD
 
 ![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/76bb801c-f25e-481a-b0fc-f4ec34f2ab93)
 
+* Há um periodo de estabilidade entre 1995 - 2005 premaceu relativamente estavés, com pequenas flutuações;
+*  partir de 2005 há um aumento significativamente  na volatilidade dos preços das ações.
+
 GameStop
 
 ![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/8ef5dc7e-f860-4451-b1c5-468298e010ad)
 
+* Teve um periodo de Estabilidade inicial entre 2005 e  2015, durante esse periodo os preçs permaneceram estaveis variando entre aproximadamente 0 e 20.
+* Entre 2015 e 2018 teve um aumento gradual dos preços com algumas flutuações.
+* A partir de 2018 alta acentuada, chegando em 2020 com 120 de valor maximo
+
 Tesla
 
 ![Gráfico de Área dos Preços de Ações](https://github.com/user-attachments/assets/f7cd0deb-3678-40b0-b635-c670937f856c)
+
+* Estabilidade inicial entre 2012 ate 2017 com valores estaveis e baixos;
+* Aumento gradual entre 2017 e 2018 com algumas fluações.
+*  Tendencia acentudada a paritir de 2018, chegando no pico em 2020.
+
 
 **Painéis**
 

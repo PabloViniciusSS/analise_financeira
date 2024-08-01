@@ -4,7 +4,7 @@
 
 **Objetivo:**
 
-Neste projeto assumirei um pepl fundamental em uma empresa de investimentos em startups que é especialista em auxiliar os clientes a investir em ações promissoras. O objetivo  é extrair dados financeiros como histórico de preços e ações e relatórios de receita trimestrais de várias fontes. Realizar a criação de um painel para identificar padrões ou tendências. Para que, possam tirar insights valioros ajudando nas tomadas de decisões estrategicas dos investidores.
+Este projeto assumirei um pepl fundamental em uma empresa de investimentos em startups que é especialista em auxiliar os clientes a investir em ações promissoras. O objetivo  é extrair dados financeiros como histórico de preços e ações e relatórios de receita trimestrais de várias fontes. Realizar a criação de um painel para identificar padrões ou tendências. Para que, possam tirar insights valioros ajudando nas tomadas de decisões estrategicas dos investidores.
 
 Foi realizado as seguintes ações:
 
@@ -407,3 +407,5 @@ GameStop
 Este painel apresenta uma visão detalhada e clara do desempenho financeiro da GameStop ao longo do tempo. A observação dos gráficos de preços das ações e receitas mostra uma correlação nítida entre alterações no status do mercado e variações financeiras. Essa visão pode ser altamente benéfica para qualquer investidor disposto a aprender sobre a história das flutuações do mercado e, assim, tomar uma decisão baseada em fatos.
 
 **## Conclusão**
+
+A análise financeira é uma parte crucial do investimento em startups. Este projeto propostas não apenas fornecer uma solução técnica para a coleta e análise de dados, mas também equipar os investidores com as ferramentas necessárias para fazer escolhas informadas e estratégicas. Se desenvolvido, esta ferramenta contribuirá para a valorização do sucesso do investidor no mercado mutável e volúvel da startup.

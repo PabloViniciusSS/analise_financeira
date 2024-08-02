@@ -100,7 +100,6 @@ Para acessar as informações das ações das empresas utiliza o ***Ticker*** e 
 
 Os códigos de cada empresa são:
 
-* Apple: “**APPL”**;  
 * AMD: “**AMD”;**  
 * Amazon**: “AMZN”;**  
 * Tesla**: “TSLA”;**  
